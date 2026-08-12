@@ -72,16 +72,10 @@ img{max-width:100%;display:block}
 .hstat+.hstat{padding-left:26px;border-left:1px solid rgba(255,255,255,.12)}
 
 /* hero visual */
-.hero-visual{position:relative}
-.product-card{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.18);border-radius:var(--r-lg);padding:26px;backdrop-filter:blur(8px);box-shadow:var(--sh-lg)}
-.product-card img{border-radius:16px;width:100%;aspect-ratio:16/11;object-fit:cover}
-.float-badge{position:absolute;display:flex;align-items:center;gap:10px;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:var(--sh);font-weight:700;font-size:.85rem;color:var(--navy)}
-.float-badge i{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.95rem}
-.fb-90{left:-18px;bottom:34px;animation:floaty 4s ease-in-out infinite}
-.fb-90 i{background:var(--grad-red)}
-.fb-safe{right:-14px;top:30px;animation:floaty 4s ease-in-out infinite .8s}
-.fb-safe i{background:var(--grad-blue)}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.poster-frame{position:relative;border-radius:var(--r-lg);padding:12px;background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);box-shadow:var(--sh-lg);max-width:520px;width:100%}
+.poster-frame::after{content:"";position:absolute;inset:-2px;border-radius:calc(var(--r-lg) + 2px);background:linear-gradient(140deg,rgba(56,189,248,.5),transparent 40%,rgba(225,29,42,.4));z-index:-1;filter:blur(14px);opacity:.7}
+.poster-frame img{border-radius:16px;width:100%;height:auto;display:block}
 
 /* ===== SECTION SHELL ===== */
 .sec{padding:84px 0}
@@ -221,10 +215,10 @@ textarea.fld{padding:13px 15px;min-height:74px;resize:vertical}
   <div class="wrap">
     <div class="hero-copy">
       <span class="pill"><i class="fas fa-certificate"></i> HP Navya &bull; New India, New Energy</span>
-      <h1>Upgrade to a <span class="red">Smarter Cooking</span> <span class="out">Experience!</span></h1>
-      <p class="lead">Switch to the new-age HP Navya composite cylinder — lighter, safer &amp; more convenient. The fastest way to start cooking.</p>
+      <h1>Pre-Book the <span class="red">HP Navya</span> Cylinder</h1>
+      <p class="lead">Lighter, safer, rust-free &amp; modern. Switch to the new-age composite cylinder — the fastest way to start cooking.</p>
       <div class="hero-cta">
-        <a href="#enquiry" class="btn btn-red"><i class="fas fa-calendar-check"></i> Pre-Book Your Navya Cylinder</a>
+        <a href="#enquiry" class="btn btn-red"><i class="fas fa-calendar-check"></i> Pre-Book Now</a>
         <a href="https://wa.me/919923881403?text=Hi%2C%20I%20want%20to%20pre-book%20the%20HP%20Navya%20Cylinder." target="_blank" class="btn btn-ghost"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
       </div>
       <div class="hero-stats">
@@ -234,10 +228,8 @@ textarea.fld{padding:13px 15px;min-height:74px;resize:vertical}
       </div>
     </div>
     <div class="hero-visual">
-      <div class="product-card">
-        <img src="https://www.kavlekargasservice.in/navya-campaign/navya-campaign-banner.jpg" alt="HP Navya Composite LPG Cylinder">
-        <div class="float-badge fb-90"><i class="fas fa-stopwatch"></i> 90 mins to cook</div>
-        <div class="float-badge fb-safe"><i class="fas fa-shield-halved"></i> Rust-Free &amp; Safe</div>
+      <div class="poster-frame">
+        <img src="https://www.kavlekargasservice.in/navya-campaign/navya-poster.jpeg" alt="HP Navya Cylinder — Upgrade to a Smarter Cooking Experience. Bigger capacity, lightweight, rust resistant, safer technology, modern composite design.">
       </div>
     </div>
   </div>
