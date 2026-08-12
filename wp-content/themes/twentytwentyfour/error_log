@@ -1,0 +1,4 @@
+[22-Nov-2025 21:26:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home4/sanctqeo/public_html/kavlekargasservice.in/wp-content/themes/twentytwentyfour/functions.php:147
+Stack trace:
+#0 {main}
+  thrown in /home4/sanctqeo/public_html/kavlekargasservice.in/wp-content/themes/twentytwentyfour/functions.php on line 147
