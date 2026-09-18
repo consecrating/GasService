@@ -164,11 +164,14 @@ if ( ! class_exists( 'KGS_Navya_Lead_Slider' ) ) :
 .kgsnls-glow{position:absolute;width:560px;height:560px;left:-200px;bottom:-260px;background:radial-gradient(circle,rgba(217,18,31,.20),transparent 68%);border-radius:50%;pointer-events:none;z-index:0}
 .kgsnls-wrap{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:0 22px}
 .kgsnls-head{text-align:center;max-width:800px;margin:0 auto clamp(24px,2.6vw,34px)}
-.kgsnls-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);color:var(--kgs-mint);font-size:.76rem;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;padding:8px 16px;border-radius:50px;margin:0 0 16px}
+/* margins carry !important because the host post-content wrapper zeroes/overrides
+   paragraph margins; the eyebrow selector is also scoped so the subtext rule below
+   can't clobber its bottom margin (they are both <p> inside .kgsnls-head) */
+.kgsnls-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);color:var(--kgs-mint);font-size:.76rem;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;padding:8px 16px;border-radius:50px;margin:0 0 20px!important}
 .kgsnls-eyebrow .kgsnls-i{--kgs-is:15px;color:var(--kgs-gold)}
-.kgsnls-head h2{margin:0;color:#fff;font-family:'Jost','Montserrat',sans-serif;font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:700;line-height:1.14;letter-spacing:-.5px}
+.kgsnls-head h2{margin:0!important;color:#fff;font-family:'Jost','Montserrat',sans-serif;font-size:clamp(1.7rem,3.2vw,2.5rem);font-weight:700;line-height:1.14;letter-spacing:-.5px}
 .kgsnls-head h2 em{font-style:normal;color:var(--kgs-gold)}
-.kgsnls-head p{margin:14px auto 0;max-width:62ch;color:rgba(255,255,255,.82);font-size:clamp(1rem,1.35vw,1.12rem);line-height:1.5}
+.kgsnls-head p:not(.kgsnls-eyebrow){margin:16px auto 0!important;max-width:62ch;color:rgba(255,255,255,.82);font-size:clamp(1rem,1.35vw,1.12rem);line-height:1.5}
 .kgsnls-grid{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(0,1fr);gap:clamp(18px,2.2vw,28px);align-items:center}
 
 /* ---- slider shell ---- */
@@ -309,6 +312,9 @@ if ( ! class_exists( 'KGS_Navya_Lead_Slider' ) ) :
 .elementor-element-cd65c37 .elementor-image-box-img{margin-left:auto!important;margin-right:auto!important;text-align:center!important;justify-content:center!important}
 .elementor-element-cd65c37 .elementor-image-box-img img,
 .elementor-element-cd65c37 .elementor-icon-box-icon img{margin-left:auto!important;margin-right:auto!important}
+/* the icon row sits flush against the slider band (its own padding-top is 0);
+   add breathing room so the icons don't touch the section above */
+.elementor-element-cd65c37{padding-top:clamp(46px,5vw,68px)!important}
 @media (prefers-reduced-motion:reduce){
   .kgsnls *,.kgsnls *::before,.kgsnls *::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
   .kgsnls-track{transition:none}
@@ -356,7 +362,7 @@ CSS;
 <div class="kgsnls-wrap">
 
   <div class="kgsnls-head">
-    <p class="kgsnls-eyebrow">{$i_bolt} New Launch &middot; HP Gas Authorized</p>
+    <p class="kgsnls-eyebrow">{$i_bolt} HP Navya &ndash; New Connection Available</p>
     <h2 id="kgsnls-title">Switch to <em>NAVYA</em> &mdash; the 10&nbsp;KG Composite Cylinder</h2>
     <p>New connections now available across Goa. Book now, pay later &mdash; just one ID proof and delivery within 90 minutes.</p>
   </div>
