@@ -192,7 +192,7 @@ if ( ! class_exists( 'KGS_Navya_Lead_Slider' ) ) :
 .kgsnls-slide h3{margin:0 0 12px;color:#fff;font-family:'Jost','Montserrat',sans-serif;font-size:clamp(1.45rem,2.6vw,2.05rem);font-weight:700;line-height:1.14;letter-spacing:-.5px}
 .kgsnls-slide h3 span{color:var(--kgs-gold)}
 .kgsnls-slide>p{margin:0;color:rgba(255,255,255,.82);font-size:clamp(.98rem,1.3vw,1.08rem);line-height:1.55;max-width:52ch}
-.kgsnls-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0;padding:0;list-style:none}
+.kgsnls-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0;padding:0;list-style:none}
 .kgsnls-stats li{background:linear-gradient(150deg,rgba(255,255,255,.12),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.16);border-radius:var(--kgs-r);padding:18px 16px;text-align:center}
 .kgsnls-stats b{display:block;font-family:'Anton','Jost',sans-serif;font-size:2rem;font-weight:400;letter-spacing:.5px;color:#fff;line-height:1}
 .kgsnls-stats b i{font-style:normal;font-size:.82rem;color:var(--kgs-mint-2);margin-left:3px;letter-spacing:.5px}
@@ -296,8 +296,10 @@ if ( ! class_exists( 'KGS_Navya_Lead_Slider' ) ) :
   .kgsnls-wrap{padding:0 15px}
   .kgsnls-slide{padding:24px 20px}
   .kgsnls-ctrls{padding:0 18px 18px;justify-content:center}
-  .kgsnls-stats{grid-template-columns:repeat(2,1fr);gap:10px}
-  .kgsnls-stats b{font-size:1.8rem}
+  .kgsnls-stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .kgsnls-stats li{padding:14px 8px}
+  .kgsnls-stats b{font-size:1.6rem}
+  .kgsnls-stats small{font-size:.7rem;letter-spacing:.3px}
   .kgsnls-form{padding:24px 20px}
   .kgsnls-arrows{order:-1}
 }
@@ -384,7 +386,6 @@ CSS;
               <li><b>10<i>KG</i></b><small>Composite FTL</small></li>
               <li><b>90<i>MIN</i></b><small>Fast Delivery</small></li>
               <li><b>1<i>ID</i></b><small>Proof Only</small></li>
-              <li><b>0<i>&#8377;</i></b><small>Pay Later</small></li>
             </ul>
             <div class="kgsnls-sc"><a class="kgsnls-link" href="{$campaign}">See full campaign details {$i_arrow}</a></div>
           </div>
@@ -459,7 +460,7 @@ CSS;
         </div>
       </div>
 
-      <p class="kgsnls-offer">{$i_check} Book now, pay later &mdash; limited launch stock</p>
+      <p class="kgsnls-offer">{$i_check} New connection available now &mdash; book now, pay later</p>
 
       <form id="kgsnls-form" novalidate>
         <div class="kgsnls-fg">
